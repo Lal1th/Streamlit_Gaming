@@ -26,7 +26,7 @@ if st.session_state.page == "Home":
 # Cache data loading for better performance
     @st.cache_data
     def load_data():
-        return pd.read_csv("/content/GamingStudy_data.csv", encoding='latin-1')
+        return pd.read_csv("GamingStudy_data.csv", encoding='latin-1')
 
     nltk.download('wordnet')
     nltk.download('omw-1.4')

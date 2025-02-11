@@ -81,7 +81,7 @@ if st.session_state.page == "Home":
     ])
 
     with tab0:
-        st.subheader("A DATA 605 Project by Lalith and Ojas")
+        st.subheader("A DATA 605 Project by Ojas and Lalith")
         st.subheader("Why Gaming ??!!")
         st.markdown("""
         Did you know that the biggest industry in terms of revenue isn’t movies or music? Surprisingly,

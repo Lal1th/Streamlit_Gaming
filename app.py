@@ -18,7 +18,7 @@ if "page" not in st.session_state:
     st.session_state.page = "Home"
 
 # Sidebar with an icon button to switch pages
-
+st.sidebar.title("dd")
 if st.sidebar.button("🔄 Behavioral <-> Sales"):
     st.session_state.page = "Dashboard" if st.session_state.page == "Home" else "Home"
 

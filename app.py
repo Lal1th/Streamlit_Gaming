@@ -13,11 +13,9 @@ from sklearn.decomposition import PCA
 from sklearn.metrics import silhouette_score
 import scipy.stats as stats
 
-# Initialize session state for page navigation
 if "page" not in st.session_state:
     st.session_state.page = "Home"
 
-# Sidebar with an icon button to switch pages
 
 if st.sidebar.button("🔄 Behavioral <-> Sales"):
     st.session_state.page = "Dashboard" if st.session_state.page == "Home" else "Home"

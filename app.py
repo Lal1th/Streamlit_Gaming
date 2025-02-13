@@ -17,7 +17,7 @@ if "page" not in st.session_state:
     st.session_state.page = "Home"
 
 
-if st.sidebar.button("🔄 Behavioral <-> Sales"):
+if st.sidebar.button("🔄 Behavioural  <-> Sales"):
     st.session_state.page = "Dashboard" if st.session_state.page == "Home" else "Home"
 
 

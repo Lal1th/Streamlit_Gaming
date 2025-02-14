@@ -322,7 +322,7 @@ if st.session_state.page == "Home":
         F, p = stats.f_oneway(*groups)
 
         st.write("### ANOVA Results")
-        st.write(f"F-statistic = {F:.2f}, p-value = {p:.20f}")
+        st.write(f"F-statistic = {F:.2f}, p-value = {p:.50f}")
 
         st.subheader("Interpretation:")
         st.markdown("""

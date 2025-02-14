@@ -205,7 +205,7 @@ if st.session_state.page == "Home":
         st.subheader("Chi-Square Test Results")
         st.markdown(f"""
         - **Chi-Square Statistic**: `{chi2:.2f}`
-        - **P-value**: `{p:.50f}`
+        - **P-value**: `{p:.20f}`
         - **Significance**: {'✅ Significant' if p < 0.05 else '❌ Not Significant'}
         """)
         st.subheader("Key Insights")
@@ -322,7 +322,7 @@ if st.session_state.page == "Home":
         F, p = stats.f_oneway(*groups)
 
         st.write("### ANOVA Results")
-        st.write(f"F-statistic = {F:.2f}, p-value = {p:.2f}")
+        st.write(f"F-statistic = {F:.2f}, p-value = {p:.20f}")
 
         st.subheader("Interpretation:")
         st.markdown("""

@@ -205,7 +205,7 @@ if st.session_state.page == "Home":
         st.subheader("Chi-Square Test Results")
         st.markdown(f"""
         - **Chi-Square Statistic**: `{chi2:.2f}`
-        - **P-value**: `{p:.15f}`
+        - **P-value**: `{p:.50f}`
         - **Significance**: {'✅ Significant' if p < 0.05 else '❌ Not Significant'}
         """)
         st.subheader("Key Insights")

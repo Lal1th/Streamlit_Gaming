@@ -489,14 +489,7 @@ else:
         st.plotly_chart(fig, use_container_width=True)
 
 
-        st.subheader("Sales Trends Over Time")
-        trend_data = filtered_df.groupby("Year_of_Release")["Global_Sales"].sum().reset_index()
-        fig = px.area(trend_data,
-                      x='Year_of_Release',
-                      y='Global_Sales',
-                      markers=True,
-                      title="Global Sales Trend Over Time")
-        st.plotly_chart(fig, use_container_width=True)
+
 
         st.markdown('''Wii Dominates:The Wii platform (blue bars) has the highest-selling games, with Wii 
         Sports being the best-selling title, surpassing 80 million units.
@@ -515,6 +508,38 @@ Despite high sales, they are lower than the best-selling Wii and GTA titles.
 - Multi-platform titles like GTA V and Call of Duty performed well across different consoles.
 - Older generation consoles like PS2 (GTA titles) still made an impact in terms of total sales.
         ''')
+        st.subheader("Sales Trends Over Time")
+        trend_data = filtered_df.groupby("Year_of_Release")["Global_Sales"].sum().reset_index()
+        fig = px.area(trend_data,
+                      x='Year_of_Release',
+                      y='Global_Sales',
+                      markers=True,
+                      title="Global Sales Trend Over Time")
+        st.plotly_chart(fig, use_container_width=True)
+
+    st.markdown('''Growth Phase (2000 - 2008) 
+    Sales increased steadily from 2000 to 2008, peaking around 2008.
+The gaming industry saw significant growth, likely due to the rise of popular gaming consoles (PS2, PS3, Xbox 360, Wii) and blockbuster titles.
+
+Peak Period (2008 - 2009)
+Global sales hit the highest point in 2008-2009, surpassing 350 million units.
+This could be attributed to the dominance of Wii, PlayStation, and Xbox franchises, along with popular games like Grand Theft Auto IV, Call of Duty: Modern Warfare, and Wii Sports.
+
+Decline Phase (2010 - 2016)
+After 2009, sales gradually declined, dropping significantly post-2012.
+Possible reasons:
+Market saturation and fewer groundbreaking game releases.
+Transition to digital downloads and online gaming, reducing physical sales.
+The decline of older console sales (PS2, Wii, Xbox 360).
+Steady Drop After 2014
+
+Post-2014, the decline becomes sharper.
+Could be linked to the rise of mobile gaming, digital storefronts (Steam, PlayStation Store, Xbox Live), reducing reliance on physical sales.
+    ''')
+    st.markdown('''- Golden Era: 2006-2009 was the peak of global game sales.
+- Shift in Industry Trends: The decline post-2010 suggests a move from physical game sales to digital downloads and live services.
+- Modern Trends: If extended to 2020s, digital sales (e.g., on Steam, PSN, and Xbox Live) and subscription services (Game Pass, PlayStation Plus) would likely dominate.
+    ''')
 
     with tab2:
         st.header("Review Score Analysis")

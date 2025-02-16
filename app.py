@@ -507,8 +507,8 @@ else:
         Grand Theft Auto (GTA) Series is Strong:        
         GTA V is the highest-selling multi-platform game (PS3 + X360), with a strong presence in light blue (PS3) and pink (X360).
         GTA: San Andreas and GTA: Vice City have high sales, particularly on PS2 (red bars).
-        Call of Duty's Popularity:
         
+        Call of Duty's Popularity:        
         Call of Duty: Modern Warfare 3 (X360 - pink) and Call of Duty: Black Ops 3 (PS4 - green) are among the top 10.
         Despite high sales, they are lower than the best-selling Wii and GTA titles.
         ''')
@@ -576,16 +576,16 @@ else:
         Higher Critic Scores Don’t Always Guarantee Higher Sales
         Many games with critic scores above 80 still have low global sales.
         However, some games with high sales do have strong critic scores (above 80), showing a slight correlation.
-        Sports Games (Dark Blue)
         
+        Sports Games (Dark Blue)        
         A few outliers with extremely high global sales (~80 million) despite varying critic scores.
         These could be popular franchises like FIFA, Madden NFL, or Wii Sports, which have strong brand recognition regardless of reviews.
-        Action Games (Light Blue)
         
+        Action Games (Light Blue)        
         Several high-selling games appear in this category, especially for scores above 70.
         Some action games with very high critic scores (near 100) still show moderate sales, suggesting good reviews don’t always translate to massive commercial success.
-        Shooter Games (Red)
         
+        Shooter Games (Red)        
         Most populated genre in the dataset.
         Several games with moderate to high scores (70-90) have significant sales (5-20 million).
         Likely includes franchises like Call of Duty and Battlefield, which sell well even with mixed reviews.
@@ -604,8 +604,7 @@ else:
         sales but lower user scores due to repetitive annual releases, while Shooter games (e.g., Call of Duty) balance 
         strong sales with higher user ratings, reflecting their engaged fanbases and multiplayer appeal; Action games show 
         mixed results, with sales and scores varying by title quality. The inferred trends highlight a potential trade-off 
-        between commercial success and user satisfaction, though the absence of plotted data points and unclear sales/user 
-        score scales limits definitive conclusions.
+        between commercial success and user satisfaction.
         ''')
 
         st.subheader("Regional Sales Correlations")
@@ -693,7 +692,7 @@ else:
         EU (28.96M), likely representing mainstream Western hits; Cluster 2 shows moderate sales 
         (NA: ~3.17M) and aligns with mid-tier titles; Cluster 0 has minimal sales globally (NA: 0.23M), 
         indicating niche or poorly performing games. PC1 strongly correlates with commercial success, 
-        while PC2 contributes negligibly, suggesting sales performance (especially in NA/EU) is the primary driver of variance in this dataset.
+        while PC2 contributes negligibly, suggesting sales performance (especially in NA/EU) is the primary driver of Video Games Sales.
         ''')
     st.markdown('</div>', unsafe_allow_html=True)
 

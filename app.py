@@ -198,6 +198,11 @@ if st.session_state.page == "Home":
         )
 
         st.plotly_chart(fig)
+        st.markdown("""
+        - Males tend to report more competitive motivations ("Compete/Win")
+        - Female players emphasize "Fun/Relax" and "Improve/Skill" aspects
+        - "Improve/Skill" is common across all genders
+        """)
         st.header("Statistical Analysis")
         contingency_table = pd.crosstab(df_exploded['Gender'], df_exploded['whyplay_cats'])
         chi2, p, _, _ = chi2_contingency(contingency_table)
@@ -209,12 +214,7 @@ if st.session_state.page == "Home":
         - **Significance**: {'✅ Significant' if p < 0.05 else '❌ Not Significant'}
         """)
         st.subheader("Key Insights")
-        st.markdown("""
-        - Males tend to report more competitive motivations ("Compete/Win")
-        - Female players emphasize "Fun/Relax" and "Improve/Skill" aspects
-        - "Improve/Skill" is common across all genders
-        - Significant association between gender and gaming motivation (p < 0.05)
-        """)
+
 
         st.subheader("Interpretation:")
         st.markdown("""
@@ -293,6 +293,9 @@ if st.session_state.page == "Home":
             fig1.update_traces(line=dict(color='green'))
             st.plotly_chart(fig1)
 
+        st.markdown('''More gaming hours tend to correlate with slightly higher anxiety, but the effect is weak.​
+        ''')
+
         if "Hours" in filtered_df.columns and "SWL_T" in filtered_df.columns:
             fig2 = px.scatter(filtered_df, x="Hours", y="SWL_T", trendline="ols",
                               title="Gaming Hours vs Satisfaction with Life",
@@ -300,7 +303,8 @@ if st.session_state.page == "Home":
             fig2.update_traces(line=dict(color='red'))
             st.plotly_chart(fig2)
 
-
+        st.markdown('''Higher gaming hours are associated with lower life satisfaction, but the effect is not uniform for all gamers.
+        ''')
 
 
 
@@ -311,11 +315,23 @@ if st.session_state.page == "Home":
         correlation_matrix_original = numeric_df_original.corr()
         st.subheader("📊 Correlation Table ")
         st.dataframe(correlation_matrix_original.style.format("{:.4f}").background_gradient(cmap='coolwarm'))
+        
+        st.markdown('''Gaming Hours & Streams (0.9761, Strong Positive Correlation)​ This suggests that i
+        ndividuals who spend more hour's gaming also tend to watch streams or other gameplay more frequently.
+        ''')
+
+        st.markdown('''Anxiety & Life Satisfaction (-0.4033, Moderate Negative Correlation)​
+        This is one of the strongest correlations in the table, showing that higher anxiety is associated with lower life satisfaction.
+        ''')    
 
         fig = px.box(df, x='Work', y='SWL_T',
                     title="Life Satisfaction (SWL_T) by Employment Status",
                     labels={"Work": "Employment Status", "SWL_T": "Life Satisfaction (SWL_T)"})
         st.plotly_chart(fig)
+        st.markdown("""
+        **Insight:** Employed individuals reported higher life satisfaction (Mean = 20.7) compared to unemployed individuals (Mean = 14.7).
+        The ANOVA indicates that these differences are statistically significant (F = 274.84, p = 0.00).
+        """)
 
         groups = [group['SWL_T'].dropna() for name, group in df.groupby('Work')]
 
@@ -339,10 +355,7 @@ if st.session_state.page == "Home":
         st.write("### Mean Life Satisfaction (SWL_T) by Employment Status")
         st.write(mean_values)
 
-        st.markdown("""
-        **Insight:** Employed individuals reported higher life satisfaction (Mean = 20.7) compared to unemployed individuals (Mean = 14.7).
-        The ANOVA indicates that these differences are statistically significant (F = 274.84, p = 0.00).
-        """)
+
 
     # -------------------------------------------------
 

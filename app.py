@@ -491,11 +491,12 @@ else:
 
 
 
-        st.markdown('''Wii Dominates:The Wii platform (blue bars) has the highest-selling games, with Wii 
+        st.markdown('''
+        Wii Dominates:The Wii platform (blue bars) has the highest-selling games, with Wii 
         Sports being the best-selling title, surpassing 80 million units.
         Other popular Wii games include Wii Sports Resort, Wii Fit, and Wii Fit Plus.
-        Grand Theft Auto (GTA) Series is Strong:
         
+        Grand Theft Auto (GTA) Series is Strong:        
         GTA V is the highest-selling multi-platform game (PS3 + X360), with a strong presence in light blue (PS3) and pink (X360).
         GTA: San Andreas and GTA: Vice City have high sales, particularly on PS2 (red bars).
         Call of Duty's Popularity:
@@ -517,7 +518,8 @@ else:
                       title="Global Sales Trend Over Time")
         st.plotly_chart(fig, use_container_width=True)
 
-        st.markdown('''Growth Phase (2000 - 2008) 
+        st.markdown('''
+        Growth Phase (2000 - 2008) 
         Sales increased steadily from 2000 to 2008, peaking around 2008.
         The gaming industry saw significant growth, likely due to the rise of popular gaming consoles (PS2, PS3, Xbox 360, Wii) and blockbuster titles.
         
@@ -556,29 +558,38 @@ else:
                         title=f"{score_type.replace('_', ' ')} vs Global Sales")
         st.plotly_chart(fig, use_container_width=True)
 
-        st.markdown('''Higher Critic Scores Don’t Always Guarantee Higher Sales
-
-Many games with critic scores above 80 still have low global sales.
-However, some games with high sales do have strong critic scores (above 80), showing a slight correlation.
-Sports Games (Dark Blue)
-
-A few outliers with extremely high global sales (~80 million) despite varying critic scores.
-These could be popular franchises like FIFA, Madden NFL, or Wii Sports, which have strong brand recognition regardless of reviews.
-Action Games (Light Blue)
-
-Several high-selling games appear in this category, especially for scores above 70.
-Some action games with very high critic scores (near 100) still show moderate sales, suggesting good reviews don’t always translate to massive commercial success.
-Shooter Games (Red)
-
-Most populated genre in the dataset.
-Several games with moderate to high scores (70-90) have significant sales (5-20 million).
-Likely includes franchises like Call of Duty and Battlefield, which sell well even with mixed reviews.
+        st.markdown('''
+        Higher Critic Scores Don’t Always Guarantee Higher Sales
+        Many games with critic scores above 80 still have low global sales.
+        However, some games with high sales do have strong critic scores (above 80), showing a slight correlation.
+        Sports Games (Dark Blue)
+        
+        A few outliers with extremely high global sales (~80 million) despite varying critic scores.
+        These could be popular franchises like FIFA, Madden NFL, or Wii Sports, which have strong brand recognition regardless of reviews.
+        Action Games (Light Blue)
+        
+        Several high-selling games appear in this category, especially for scores above 70.
+        Some action games with very high critic scores (near 100) still show moderate sales, suggesting good reviews don’t always translate to massive commercial success.
+        Shooter Games (Red)
+        
+        Most populated genre in the dataset.
+        Several games with moderate to high scores (70-90) have significant sales (5-20 million).
+        Likely includes franchises like Call of Duty and Battlefield, which sell well even with mixed reviews.
         ''')
 
         st.markdown('''
         - Sports games can have huge sales despite varying critic scores (likely due to brand loyalty).
-- Shooter and Action games show a stronger correlation between high critic scores and higher sales.
-- Games with a score below ~60 generally have low sales, reinforcing that poor reviews can negatively impact commercial success.
+        - Shooter and Action games show a stronger correlation between high critic scores and higher sales.
+        - Games with a score below ~60 generally have low sales, reinforcing that poor reviews can negatively impact commercial success.
+        ''')
+
+        st.markdown('''
+        The scatterplot "User Score vs Global Sales" suggests that Sports games (e.g., FIFA) likely achieve high global 
+        sales but lower user scores due to repetitive annual releases, while Shooter games (e.g., Call of Duty) balance 
+        strong sales with higher user ratings, reflecting their engaged fanbases and multiplayer appeal; Action games show 
+        mixed results, with sales and scores varying by title quality. The inferred trends highlight a potential trade-off 
+        between commercial success and user satisfaction, though the absence of plotted data points and unclear sales/user 
+        score scales limits definitive conclusions.
         ''')
 
         st.subheader("Regional Sales Correlations")

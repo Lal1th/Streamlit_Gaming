@@ -505,7 +505,8 @@ else:
         Despite high sales, they are lower than the best-selling Wii and GTA titles.
         ''')
 
-        st.markdown('''- Wii had some of the highest-selling exclusive games, likely due to its popularity as a casual gaming console.
+        st.markdown('''- 
+        Wii had some of the highest-selling exclusive games, likely due to its popularity as a casual gaming console.
         - Multi-platform titles like GTA V and Call of Duty performed well across different consoles.
         - Older generation consoles like PS2 (GTA titles) still made an impact in terms of total sales.
         ''')
@@ -538,7 +539,8 @@ else:
         Post-2014, the decline becomes sharper.
         Could be linked to the rise of mobile gaming, digital storefronts (Steam, PlayStation Store, Xbox Live), reducing reliance on physical sales.
         ''')
-        st.markdown('''- Golden Era: 2006-2009 was the peak of global game sales.
+        st.markdown('''
+        - Golden Era: 2006-2009 was the peak of global game sales.
         
         - Shift in Industry Trends: The decline post-2010 suggests a move from physical game sales to digital downloads and live services.
         

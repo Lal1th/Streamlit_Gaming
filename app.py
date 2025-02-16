@@ -171,8 +171,11 @@ if st.session_state.page == "Home":
 
         st.plotly_chart(fig)
         st.markdown("""
-        - Males tend to report more competitive motivations ("Compete/Win") and "Improve/Skill".
-        - Female players emphasize "Fun/Relax" aspects than their counterparts
+        The data reveals distinct gaming motivations between genders: male players dominate in sheer numbers 
+        (up to 5,000 players vs. 400 for females), with both genders prioritizing “Fun/Relaxation” as their top motivation. 
+        However, males exhibit a stronger emphasis on “Compete/Win” (likely driven by competitive genres), 
+        while females show relatively higher interest in “Improve/Skill” and moderate engagement in “Social” aspects. 
+        The stark scale difference suggests either a gender disparity in gaming participation 
         """)
         st.header("Statistical Analysis")
         contingency_table = pd.crosstab(df_exploded['Gender'], df_exploded['whyplay_cats'])
@@ -507,7 +510,9 @@ else:
 
         st.markdown('''- 
         Wii had some of the highest-selling exclusive games, likely due to its popularity as a casual gaming console.
+        
         - Multi-platform titles like GTA V and Call of Duty performed well across different consoles.
+        
         - Older generation consoles like PS2 (GTA titles) still made an impact in terms of total sales.
         ''')
         st.subheader("Sales Trends Over Time")
@@ -620,12 +625,21 @@ else:
         st.plotly_chart(fig, use_container_width=True)
 
 
+
+
         st.subheader("Top Publishers by Region")
         publishers = filtered_df.groupby('Publisher')[['NA_Sales', 'EU_Sales', 'JP_Sales']].sum()
         fig = px.bar(publishers.nlargest(5, 'NA_Sales'),
                     orientation='h',
                     title="Top Publishers in North America")
         st.plotly_chart(fig, use_container_width=True)
+        st.markdown('''
+        The sales distribution data across regions suggests NA and EU markets prioritize similar genres, 
+        with the largest share (41-42.5%) likely attributed to Action games, followed by Sports (30.9-32.2%) 
+        and Shooters (26.6-26.8%), while Japan’s market diverges sharply, with a dominant genre (57.2%, potentially 
+        RPGs or a locally popular category) far outpacing others (32.8%), reflecting regional preferences—Western 
+        markets favor action/sports titles, whereas Japan leans toward niche or story-driven genres.
+        ''')
 
     with tab4:
         st.header("Game Clustering Analysis")
@@ -659,7 +673,17 @@ else:
         profile = cluster_df.groupby('Cluster').mean()
         st.dataframe(profile.style.background_gradient(cmap='Blues'), use_container_width=True)
 
+        st.markdown('''
+        The PCA visualization reveals three distinct game clusters based on regional sales: 
+        Cluster 1 (high PC1 value) dominates with blockbuster-level sales in NA (41.36M) and 
+        EU (28.96M), likely representing mainstream Western hits; Cluster 2 shows moderate sales 
+        (NA: ~3.17M) and aligns with mid-tier titles; Cluster 0 has minimal sales globally (NA: 0.23M), 
+        indicating niche or poorly performing games. PC1 strongly correlates with commercial success, 
+        while PC2 contributes negligibly, suggesting sales performance (especially in NA/EU) is the primary driver of variance in this dataset.
+        ''')
     st.markdown('</div>', unsafe_allow_html=True)
+
+    
 
 
     with tab5:

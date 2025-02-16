@@ -498,6 +498,24 @@ else:
                       title="Global Sales Trend Over Time")
         st.plotly_chart(fig, use_container_width=True)
 
+        st.markdown('''Wii Dominates:The Wii platform (blue bars) has the highest-selling games, with Wii 
+        Sports being the best-selling title, surpassing 80 million units.
+Other popular Wii games include Wii Sports Resort, Wii Fit, and Wii Fit Plus.
+Grand Theft Auto (GTA) Series is Strong:
+
+GTA V is the highest-selling multi-platform game (PS3 + X360), with a strong presence in light blue (PS3) and pink (X360).
+GTA: San Andreas and GTA: Vice City have high sales, particularly on PS2 (red bars).
+Call of Duty's Popularity:
+
+Call of Duty: Modern Warfare 3 (X360 - pink) and Call of Duty: Black Ops 3 (PS4 - green) are among the top 10.
+Despite high sales, they are lower than the best-selling Wii and GTA titles.
+        ''')
+
+        st.markdown('''- Wii had some of the highest-selling exclusive games, likely due to its popularity as a casual gaming console.
+- Multi-platform titles like GTA V and Call of Duty performed well across different consoles.
+- Older generation consoles like PS2 (GTA titles) still made an impact in terms of total sales.
+        ''')
+
     with tab2:
         st.header("Review Score Analysis")
 

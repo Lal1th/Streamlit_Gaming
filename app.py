@@ -126,36 +126,7 @@ if st.session_state.page == "Home":
 
         """)
 
-        st.subheader("Info about dataset")
-
-        st.markdown("""
-        GAD     [0 --> 3]   [not at all,  several days,  over half the days, nearly always]
-
-    - If u feel nervous, anxious
-    - not being able to control or stop worrying
-    - worrying too much about other things
-    - trouble relaxing
-    - being restless
-    - becoming easily annoyd or irritated
-    - feeling awfull as somthin bad is goin to happen
-    """)
-
-        st.markdown("<span style='color: red; font-weight: bold;'>More is Bad!</span>", unsafe_allow_html=True)
-
-        st.markdown("""
-
-    SWL    [1 --> 7] [Strongly disagree, Disagree, silghtly disagree, neutral, silghtly agre, agree, strongly disagree]
-
-    - satisfied
-    - ideal
-    - excellent life
-    - wont not change my life
-    - gotten important things in I want in my life
-    """)
-
-        st.markdown("<span style='color: green; font-weight: bold;'>More is Good!</span>", unsafe_allow_html=True)
-
-
+ 
     with tab1:
         st.header("Behavioral Analysis")
 
@@ -199,9 +170,8 @@ if st.session_state.page == "Home":
 
         st.plotly_chart(fig)
         st.markdown("""
-        - Males tend to report more competitive motivations ("Compete/Win")
-        - Female players emphasize "Fun/Relax" and "Improve/Skill" aspects
-        - "Improve/Skill" is common across all genders
+        - Males tend to report more competitive motivations ("Compete/Win") and "Improve/Skill".
+        - Female players emphasize "Fun/Relax" aspects than their counterparts
         """)
         st.header("Statistical Analysis")
         contingency_table = pd.crosstab(df_exploded['Gender'], df_exploded['whyplay_cats'])

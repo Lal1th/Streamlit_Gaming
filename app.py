@@ -16,7 +16,8 @@ import scipy.stats as stats
 if "page" not in st.session_state:
     st.session_state.page = "Home"
 
-
+st.sidebar.markdown('''Click here to switch between Behaioural and Sales Analysis
+''')
 if st.sidebar.button("🔄 Behavioural  <-> Sales"):
     st.session_state.page = "Dashboard" if st.session_state.page == "Home" else "Home"
 

@@ -283,8 +283,7 @@ if st.session_state.page == "Home":
         implies that gaming may initially serve as a stress-relief tool but becomes counterproductive at excessive levels, 
         potentially due to disrupted routines or social isolation. The inflection point near 40–60 hours highlights a critical 
         threshold for balancing gaming’s benefits and risks, aligning with studies advocating moderation for mental health. 
-        Further context on demographics and gaming genres would refine these insights.
-        ''')
+         ''')
 
 
 
@@ -514,8 +513,8 @@ else:
         Despite high sales, they are lower than the best-selling Wii and GTA titles.
         ''')
 
-        st.markdown('''- 
-        Wii had some of the highest-selling exclusive games, likely due to its popularity as a casual gaming console.
+        st.markdown('''
+        - Wii had some of the highest-selling exclusive games, likely due to its popularity as a casual gaming console.
         
         - Multi-platform titles like GTA V and Call of Duty performed well across different consoles.
         
@@ -616,6 +615,15 @@ else:
                         color_continuous_scale='Blues',
                         title="Regional Sales Correlation Heatmap")
         st.plotly_chart(fig, use_container_width=True)
+
+        st.markdown('''
+        The correlation heatmap reveals distinct regional sales dynamics: NA and EU sales are strongly correlated (0.84), 
+        suggesting similar market preferences or synchronized consumer behavior in Western markets. JP sales show weaker 
+        ties to NA (0.43) and EU (0.49), highlighting Japan’s unique gaming preferences (e.g., favoring local genres like RPGs). 
+        Other_Sales (global regions outside NA/EU/JP) align moderately with NA (0.75) and EU (0.75), but weakly with JP (0.39), 
+        reinforcing the divide between Western and Japanese markets. This underscores the need for region-specific strategies—leveraging
+        Western market synergies while tailoring approaches for Japan and other regions to account for cultural and genre-specific demand.
+        ''')
 
     with tab3:
         st.header("Regional Market Analysis")

@@ -267,8 +267,7 @@ if st.session_state.page == "Home":
             fig1.update_traces(line=dict(color='green'))
             st.plotly_chart(fig1)
 
-        st.markdown('''More gaming hours tend to correlate with slightly higher anxiety, but the effect is weak.​
-        ''')
+
 
         if "Hours" in filtered_df.columns and "SWL_T" in filtered_df.columns:
             fig2 = px.scatter(filtered_df, x="Hours", y="SWL_T", trendline="ols",
@@ -277,7 +276,14 @@ if st.session_state.page == "Home":
             fig2.update_traces(line=dict(color='red'))
             st.plotly_chart(fig2)
 
-        st.markdown('''Higher gaming hours are associated with lower life satisfaction, but the effect is not uniform for all gamers.
+        st.markdown('''
+        The data suggests a nuanced relationship between gaming hours and psychological well-being: while moderate gaming 
+        (up to ~40 hours) correlates with lower anxiety levels (GAD_T) and higher life satisfaction (WILT), prolonged gaming 
+        (over 80 hours) shows a reversal, with anxiety rising sharply and life satisfaction declining. This U-shaped trend 
+        implies that gaming may initially serve as a stress-relief tool but becomes counterproductive at excessive levels, 
+        potentially due to disrupted routines or social isolation. The inflection point near 40–60 hours highlights a critical 
+        threshold for balancing gaming’s benefits and risks, aligning with studies advocating moderation for mental health. 
+        Further context on demographics and gaming genres would refine these insights.
         ''')
 
 

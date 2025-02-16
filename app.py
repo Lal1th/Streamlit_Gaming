@@ -175,7 +175,7 @@ if st.session_state.page == "Home":
         (up to 5,000 players vs. 400 for females), with both genders prioritizing “Fun/Relaxation” as their top motivation. 
         However, males exhibit a stronger emphasis on “Compete/Win” (likely driven by competitive genres), 
         while females show relatively higher interest in “Improve/Skill” and moderate engagement in “Social” aspects. 
-        The stark scale difference suggests either a gender disparity in gaming participation 
+        The stark scale difference suggests there is a gender disparity in gaming participation 
         """)
         st.header("Statistical Analysis")
         contingency_table = pd.crosstab(df_exploded['Gender'], df_exploded['whyplay_cats'])

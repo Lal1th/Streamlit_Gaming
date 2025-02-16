@@ -539,7 +539,9 @@ else:
         Could be linked to the rise of mobile gaming, digital storefronts (Steam, PlayStation Store, Xbox Live), reducing reliance on physical sales.
         ''')
         st.markdown('''- Golden Era: 2006-2009 was the peak of global game sales.
+        
         - Shift in Industry Trends: The decline post-2010 suggests a move from physical game sales to digital downloads and live services.
+        
         - Modern Trends: If extended to 2020s, digital sales (e.g., on Steam, PSN, and Xbox Live) and subscription services (Game Pass, PlayStation Plus) would likely dominate.
         ''')
 
@@ -579,7 +581,9 @@ else:
 
         st.markdown('''
         - Sports games can have huge sales despite varying critic scores (likely due to brand loyalty).
+        
         - Shooter and Action games show a stronger correlation between high critic scores and higher sales.
+        
         - Games with a score below ~60 generally have low sales, reinforcing that poor reviews can negatively impact commercial success.
         ''')
 

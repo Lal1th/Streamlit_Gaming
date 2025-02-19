@@ -425,7 +425,7 @@ else:
     """, unsafe_allow_html=True)
 
     @st.cache_data
-    def load_data():
+    def loaddata():
         df = pd.read_csv("Video_Games_Sales_as_at_22_Dec_2016.csv")
         df["User_Score"] = pd.to_numeric(df["User_Score"], errors='coerce')
         median_year = int(df["Year_of_Release"].median())
@@ -438,7 +438,7 @@ else:
 
         return df
 
-    df = load_data()
+    df = loaddata()
 
     selected_year_range = st.sidebar.slider(
         "Select Year Range",

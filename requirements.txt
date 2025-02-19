@@ -7,5 +7,4 @@ nltk
 scipy
 statsmodels
 matplotlib
-streamlit
 

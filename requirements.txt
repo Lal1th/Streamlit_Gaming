@@ -1,11 +1,12 @@
+streamlit>=1.31.0
+altair>=5.0.0
 numpy
 pandas
-streamlit
 plotly
 scikit-learn
 nltk
 scipy
 statsmodels
 matplotlib
-altair
+
 

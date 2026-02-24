@@ -7,4 +7,5 @@ nltk
 scipy
 statsmodels
 matplotlib
+altair
 
